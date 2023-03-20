@@ -12,6 +12,13 @@
         position: relative; bottom: 50px;
     }
 }
+.meal-list {
+    .list-element--details {position: absolute; left: 0px; bottom: 0; }
+    .list-element {padding: 0px !important; margin-left: 8px; max-width: calc(25% - 8px);
+        &:nth-child(4n+1) {margin-left: 0;}
+    }
+
+}
 .diet-main-graph {
     width: utils.get-vw(740px); overflow: hidden; height: 300px; display: inline-block; position: absolute; right: 0;
     padding: 0px 40px 30px 20px; background-color: #2E2E2E;

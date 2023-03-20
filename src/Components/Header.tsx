@@ -1,15 +1,19 @@
 import React from "react";
 import { Router, Link } from "react-router-dom";
-import "../styles/components/header.scss"
+import "../styles/components/header.scss";
+import MenuExtension from "./MenuExtension";
 
 const Header = function() {
+    const handleMenuExtension = () : void=> {
+
+    }
 
     return (
         <header className="page-header">
             <ul>
                 <li className="app-logo clickable"><Link  to="/" ><div > </div></Link></li>
                 <li className="menu-item">
-                    <div className="menu-logo icon-menu"></div>
+                    <div className="menu-logo icon-menu" onClick={handleMenuExtension}></div>
                 </li>
                 <li className="menu-item">
                     <Link to="/exercise">
@@ -29,7 +33,7 @@ const Header = function() {
                     </Link></li>
                 
             </ul>
-            
+            <MenuExtension ></MenuExtension>
         </header>
     )
 }

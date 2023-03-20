@@ -2,22 +2,25 @@
 @use "../variables/colors" as colors;
 @use "../utils" as utils;
 
-#columnPage {
-    
-}
-.white-line-56px {
-    height: 1px; width: utils.get-vw(56px); background-color: colors.$light;margin-left: calc(50% - 28px)
-  }
+
 .recommended-area { margin-top: 56px;
-    .list-element {padding-top: 0; padding-right: 0 !important; padding-left: 0; width: utils.get-vw(calc(847px/4)) !important;
-        +.list-element {padding-left: utils.get-vw(32px);}
-        &-content {width: utils.get-vw(216px); height: 144px;}
+    .list-element {padding: 0 0 0 32px !important; width: calc(25% - utils.get-vw(32px)) !important; display: block;
+        &:first-child {padding-left: 0 !important;}
+        &-content {width: 100%;height: 144px; padding: 24px 8px 8px 8px; font-size: 22px;
+            div:nth-child(3) {font-size: 18px;}
+        }
+        .white-line-56px {height: 1px; width: utils.get-vw(56px); background-color: colors.$light;margin-left: calc(50% - 28px); 
+            margin-top: 10px; margin-bottom: 8px;}
+
     }
 }
 
 .activity-area { margin-top: 56px;
-    .list-element { flex-wrap: wrap; width: utils.get-vw(calc(919px/4)) !important;
-        img {width: utils.get-vw(230px); height: 144px;}
+    .list-element { flex-wrap: wrap;padding: 0 0 0 8px !important; width: calc(25% - utils.get-vw(8px)) !important; display: block;
+        img {width: 100%; height: 144px;}
         &:nth-child(4n+1) {padding-left: 0 !important;}
+        &--details {left: 8px; top: 110px; position: absolute;}
     }
+    &-content {text-align: left; font-size: 15px; line-height: 22px; margin-top: 8px;}
+    &-hashtag {text-align: left; font-size: 12px; line-height: 22px; margin-bottom: 18px;}
 }

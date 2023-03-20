@@ -3,7 +3,7 @@
 @use "../utils" as utils;
 
 .list-element--exercise {
-    background-color: #FFCC21; position: relative; padding: 24px !important; flex-basis: utils.get-vw(288px) !important ;flex-direction: row; flex-wrap: wrap;
+    background-color: #FFCC21; position: relative; padding: 16px !important; flex-basis: utils.get-vw(287px) !important ;flex-direction: row; flex-wrap: wrap;
     justify-content: center; z-index: 0;
     img {opacity: 1; z-index: 1; position: absolute; }
     .image-title {position: absolute; top: 100px; text-align: center; width: 100%; font-family: fonts.$inter-Regular; font-weight: 400; font-size: 25px;

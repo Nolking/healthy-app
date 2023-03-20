@@ -21,7 +21,7 @@ const MenuPage = function({recordsPerPage} : Props) {
                         <div className="list-element-content bg-dark-600">
                             <div>{data.title}</div>
                             <div className="white-line-56px"></div>
-                            <div>{data.name}</div>
+                            <div className="color-light hiragino">{data.name}</div>
                         </div>
                     </div>))}
                 </PhotoRecordList>
@@ -29,7 +29,7 @@ const MenuPage = function({recordsPerPage} : Props) {
                     {columnData.slice(0, visibleRecords).map((record) => (
                         <div className="list-element">
                             <PhotoRecord 
-                                imgW={230}
+                                imgW={234}
                                 imgH={144}
                                 imageSrc={record.imageSrc} 
                                 date={record.date} 

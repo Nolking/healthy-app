@@ -106,7 +106,7 @@ const DietPage = ({recordsPerPage} : Props) => {
                         <div className="hex-icon icon-cup"></div><div  className="hex-icon-text">Snack</div>
                     </li>
                 </ul>
-                <PhotoRecordList cols={4}>
+                <PhotoRecordList cols={4} className="meal-list">
                     {dietData.slice(0, visibleRecords).map((record) => (
                         <div className="list-element">
                         <PhotoRecord
