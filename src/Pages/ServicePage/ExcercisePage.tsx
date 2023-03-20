@@ -30,6 +30,7 @@ const ExcercisePage = function({recordsPerPage} : Props) {
                     ))}
                     
                 </PhotoRecordList>
+                <div className="flex-break"></div>
                 <div className="bg-dark-600 graph-area ">
                     <div className="area-title"><span >BODY RECORD</span><span className="area-title--date">2021.05.21</span> </div>
                     <Line data={dataDietGraph} width={920} height={300} plugins={[plugin]} options={optionsDietGraph} />
