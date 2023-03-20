@@ -35,14 +35,26 @@
 }
 .exercise-area { 
     .list-record {height: 300px; overflow: auto; margin: 0 !important;}
-    .list-element {border-bottom: 1px solid colors.$gray-400; flex-basis: utils.get-vw(400px); display: flex;
-        +.list-element { margin-left: 40px;}
+    .list-element {flex-basis: utils.get-vw(400px); display: flex; 
+        &:nth-child(2n) {padding-left: 40px !important; padding-right: 20px !important;}
     }
     .exercise-data { display: flex; flex-wrap: wrap;
         .first-row {display: block; width: 100%;}
-        .dot {font-size: 6px; line-height: 20px; position: relative; bottom: 3px;}
-        .exercise-name {float: left; }
-        .exercise-time {justify-content: flex-end; display: inline; float: right;}
+        .dot {font-size: 6px; line-height: 20px; position: relative; bottom: 3px; margin-right: 8px; }
+        .exercise-name {float: left; position: relative;}
+        .exercise-time {justify-content: flex-end; display: inline; float: right; position: relative; right: 15px;}
     }
-    .exercise-calories {flex: 0 0 100%; display: flex;}
+    .exercise-calories {flex: 0 0 100%; display: flex; border-bottom: 1px solid colors.$gray-400; }
+}
+.diary-area {
+    margin-top: 56px;
+    .list-record {margin: 0 !important;}
+    .area-title {color: colors.$dark-500 ; text-align: left; height: 32px; font-size: 22px; margin-bottom: -12px;}
+    .list-element {
+        &.diary-data { flex-wrap: wrap; }
+        padding: 12px 0 0 12px !important;
+        &:nth-child(4n+1) {padding-left: 0 !important;}
+        .list-element-content {padding: 16px 16px 26px 16px; border: 1px solid colors.$gray-400;}
+        .diary-content {font-size: 12px; text-align: left; margin-top: 8px;}
+    }
 }

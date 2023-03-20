@@ -34,7 +34,6 @@ ChartJS.register(
 type Props = {
     recordsPerPage: number;
 }
-// Chart.register(CategoryScale);
 
 const DietPage = ({recordsPerPage} : Props) => {
     const [visibleRecords, setVisibleRecords] = useState(recordsPerPage)

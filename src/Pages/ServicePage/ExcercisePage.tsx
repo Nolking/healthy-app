@@ -1,21 +1,17 @@
-import React from "react";
+import React, { useState} from "react";
 import PageWrap from "../../Components/Layout/PageWrap";
 import PhotoRecordList from "../../Components/PhotoRecordList";
-import { exerciseTypes, dataDietGraph, optionsDietGraph, plugin, exerciseData } from "../../dummy/data";
+import { exerciseTypes, dataDietGraph, optionsDietGraph, plugin, exerciseData, diaryLogs } from "../../dummy/data";
 import "../../styles/pages/exercisePage.scss";
 import { Line } from "react-chartjs-2";
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-    Filler
-  } from 'chart.js';
-const ExcercisePage = function() {
+type Props = {
+    recordsPerPage: number;
+}
+const ExcercisePage = function({recordsPerPage} : Props) {
+    const [visibleRecords, setVisibleRecords] = useState(recordsPerPage)
+    const handleClickShowMore = () => {
+        setVisibleRecords((prevVisibleRecords) => prevVisibleRecords + recordsPerPage)
+    }
     return (
         <React.Fragment>
             <PageWrap>
@@ -57,8 +53,21 @@ const ExcercisePage = function() {
                         </div>))}
                     </PhotoRecordList>
                 </div>
-                <PhotoRecordList cols={4}>
-                </PhotoRecordList>        
+                <div className="bg-light diary-area">
+                    <div className="area-title">MY DIARY</div>
+                    <PhotoRecordList cols={4}>
+                        {diaryLogs.slice(0, visibleRecords).map(data => (<div className="list-element diary-data">
+                            <div className="list-element-content">
+                                <div className="flex-break inter-regular color-dark-600">{data.logTime.split(' ')[0]}</div>
+                                <div className="flex-break inter-regular color-dark-600">{data.logTime.split(' ')[1]}</div>
+                                <div className="flex-break"></div>
+                                <span className="diary-content flex-break hiragino color-dark-500">{data.logContent}</span>
+                            </div>
+                        </div>))}    
+                    </PhotoRecordList>
+                {visibleRecords < diaryLogs.length && (<button className="list-show-more-button hiragino gradient-bg clickable" onClick={handleClickShowMore}>記録をもっと見る</button>)}
+
+                </div>     
                 </div>
             </PageWrap>
         </React.Fragment>

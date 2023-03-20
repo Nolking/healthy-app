@@ -1,6 +1,6 @@
 @use "../variables/colors" as colors;
 @use "../utils" as utils;
-.list-record {display: flex; flex: 0 0 100%; width: 101%; flex-direction:row; flex-wrap: wrap;
+.list-record {display: flex; flex: 0 0 100%; width: 100%; flex-direction:row; flex-wrap: wrap;
     &.list-two {
         .list-element {
             display: inline-flex; flex: 0 0 calc(100%/2); width: calc(100%/2);
