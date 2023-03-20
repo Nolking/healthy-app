@@ -7,7 +7,7 @@ const MainRoutes = function () {
              <Routes>
                 <Route path="/" element={<DietPage recordsPerPage={8}/>}>
                 </Route>
-                <Route path="/menu"  element={<MenuPage/>}>
+                <Route path="/menu"  element={<MenuPage recordsPerPage={8}/>}>
                 </Route>
                 <Route path="/exercise"  element={<ExcercisePage recordsPerPage={8}/>}>
                 </Route>

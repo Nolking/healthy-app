@@ -3,7 +3,7 @@ import React, { ReactElement} from "react";
 export interface PhotoRecordProp {
     imageSrc: string,
     date: string,
-    time?: Date,
+    time?: string,
     recordType?: string
 }
 
@@ -11,18 +11,18 @@ type Props = {
     children?: React.ReactChild | React.ReactChild[]
     imageSrc: string,
     date: string,
-    time?: Date,
-    recordType?: string
+    time?: string,
+    recordType?: string,
+    imgW: number,
+    imgH: number
 }
 
 
 
-const PhotoRecord = ({imageSrc, date, time, recordType} : Props) : ReactElement=> {
+const PhotoRecord = ({imageSrc, date, time, recordType, imgH, imgW} : Props) : ReactElement=> {
     return (<React.Fragment>
-        <div className="list-element">
-            <img alt="" height="234" width="234" src={imageSrc}></img>
+            <img alt="" height={imgH} width={imgW} src={imageSrc}></img>
             <div className="list-element--details inter-regular"> {date} {time} {recordType}</div>
-        </div>
     </React.Fragment>)
 }
 export default PhotoRecord;

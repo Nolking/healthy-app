@@ -108,11 +108,15 @@ const DietPage = ({recordsPerPage} : Props) => {
                 </ul>
                 <PhotoRecordList cols={4}>
                     {dietData.slice(0, visibleRecords).map((record) => (
-                        <PhotoRecord 
+                        <div className="list-element">
+                        <PhotoRecord
+                            imgH={234}
+                            imgW={234}
                             imageSrc={record.imageSrc} 
                             date={record.date} 
                             recordType={record.recordType}>
                         </PhotoRecord>
+                        </div>
                     ))
                     }
                 </PhotoRecordList>

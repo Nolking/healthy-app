@@ -6,13 +6,15 @@ interface PhotoRecordListProp {
 }
 type Props = {
     children: React.ReactElement<PhotoRecordProp> | React.ReactElement<PhotoRecordProp>[],
-    cols : number
+    cols : number,
+    className?: string
 }
 
 
-const PhotoRecordList = ({children, cols} : Props) => {
+const PhotoRecordList = ({children, cols, className} : Props) => {
     let clazz = () : string => {
-        let name = "list-record "
+        let name = 'list-record '
+        if (className) {name = name + `${className} `}
         switch (cols) {
             case 2:
                 return name + "list-two"

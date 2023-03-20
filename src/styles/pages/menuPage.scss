@@ -1,0 +1,23 @@
+@use "../variables/text" as fonts;
+@use "../variables/colors" as colors;
+@use "../utils" as utils;
+
+#columnPage {
+    
+}
+.white-line-56px {
+    height: 1px; width: utils.get-vw(56px); background-color: colors.$light;margin-left: calc(50% - 28px)
+  }
+.recommended-area { margin-top: 56px;
+    .list-element {padding-top: 0; padding-right: 0 !important; padding-left: 0; width: utils.get-vw(calc(847px/4)) !important;
+        +.list-element {padding-left: utils.get-vw(32px);}
+        &-content {width: utils.get-vw(216px); height: 144px;}
+    }
+}
+
+.activity-area { margin-top: 56px;
+    .list-element { flex-wrap: wrap; width: utils.get-vw(calc(919px/4)) !important;
+        img {width: utils.get-vw(230px); height: 144px;}
+        &:nth-child(4n+1) {padding-left: 0 !important;}
+    }
+}
