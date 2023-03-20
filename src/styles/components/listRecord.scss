@@ -1,0 +1,26 @@
+@use "../variables/colors" as colors;
+@use "../utils" as utils;
+.list-record {display: flex; flex: 0 0 100%; width: 101%; flex-direction:row; flex-wrap: wrap;
+    &.list-two {
+        .list-element {
+            display: inline-flex; flex: 0 0 calc(100%/2); width: calc(100%/2);
+        }
+    }
+    &.list-three .list-element {display: inline-flex; flex: 0 0 calc(100%/3); width: calc(100%/2);}
+    &.list-four .list-element {display: inline-flex; flex: 0 0 calc(100%/4); width: calc(100%/2);}
+    &.list-five .list-element {display: inline-flex; flex: 0 0 calc(100%/5)}
+
+    .record-image {width: 234px; height: 234px;}
+    .list-element {position: relative; padding: 8px 4px 0 4px;}
+    .list-element--details { text-align: left; font-size: 15px; width: 130px; padding: 8px 0px 8px 4px; position: absolute; left: 4px; bottom: 0; background-color: colors.$primary-300; color: colors.$light}
+}
+.record-filter-area { padding: 25px 30px; 
+    display: inline-block;
+}
+.hex-icon {height: 56px; margin-top: 30px;}
+.icon-knife {background: url("../../../public/images/icon_knife.svg") no-repeat center}
+.icon-cup {background: url("../../../public/images/icon_cup.svg") no-repeat center}
+.hex-icon-text {color: colors.$light}
+
+
+.list-show-more-button {width: 300px; height: 56px; outline: none; border-radius: 5px; border: none; color: colors.$light; font-size: 18px; margin-top: 28px;}

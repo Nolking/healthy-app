@@ -1,0 +1,24 @@
+@use "../variables/text" as fonts;
+@use "../utils" as utils;
+
+.diet-main-area {display: inline-block; height: 300px;width: 100%; position: relative;}
+.diet-main-photo {
+    background: url(../../../public/images/diet_main_photo.jpg) repeat center; position: absolute; top: 0; left: 0;
+    width: utils.get-vw(540px); height: 300px; display: inline-block;
+    color: white; font-family: fonts.$inter-Regular;
+    text-shadow: 0px 0px 6px #FCA500; font-size: 25px;
+    .date {font-size: 16px;}
+    &-text {
+        position: relative; bottom: 50px;
+    }
+}
+.diet-main-graph {
+    width: utils.get-vw(740px); overflow: hidden; height: 300px; display: inline-block; position: absolute; right: 0;
+    padding: 0px 40px 30px 20px; background-color: #2E2E2E;
+    // canvas {height: 300px !important;}
+}
+.CircularProgressbar  {
+    position: relative; top: 50px;
+    width: 180px; height: 180px;
+    // box-shadow: 0px 0px 6px #FC7400;
+}

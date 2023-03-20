@@ -1,8 +1,13 @@
 @use "variables/colors" as colors;
+@use "variables/text"  as fonts;
 
-@import url("./components/text.scss");
 @import url("./common.scss");
 
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
 
 body {
     margin: 0;

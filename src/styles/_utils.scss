@@ -1,0 +1,12 @@
+$base-screen-width: 1280;
+$base-screen-height: 509;
+@function get-vw($target) { 
+  $vw-context: ($base-screen-width*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+@function get-vh($target) { 
+    $vw-context: ($base-screen-height*.01) * 1px;
+    @return ($target/$vw-context) * 1vh;
+  }
+  
+  

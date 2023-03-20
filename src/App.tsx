@@ -6,9 +6,7 @@ import MainRoutes from './Components/Routes'
 function App() {
   return (
     <div className="App">
-      <Header></Header>
       <MainRoutes></MainRoutes>
-      <Footer></Footer>
     </div>
   );
 }

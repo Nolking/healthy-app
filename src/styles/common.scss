@@ -1,3 +1,44 @@
+@use "variables/colors" as colors;
+@use "variables/text" as fonts;
+@use "utils" as utils;
+
+@import url("./common.scss");
+@import url("./components/listRecord.scss");
+
+.clickable:hover {cursor: pointer;}
+.page-wrap {
+  width: utils.get-vw(1280px); padding-bottom: 64px;
+}
+.hex {
+  width: 135px;
+  margin: 0 42px;
+  height: 135px;
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+.gradient-bg {
+  background: linear-gradient(32.95deg, colors.$primary-300 8.75%, colors.$primary-400 86.64%)
+}
+
+.bg-prim-300 {
+  background-color: colors.$primary-300;
+}
+
+.bg-prim-400 {
+  background-color: colors.$primary-400;
+}
+.bg-dark-500 {
+  background-color: colors.$dark-500;
+}
+.bg-dark-600 {
+  background-color: colors.$dark-600;
+}
+.bg-gray-400 {
+  background-color: colors.$gray-400;
+}
+.flex-break {
+  display: flex; flex: 0 0 100%;
+}
 .App {
     text-align: center;
   }
@@ -15,7 +56,7 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: colors.$light;
   }
   
   .App-link {
@@ -33,3 +74,19 @@
   .test {
     background: url("../../public/images/App_Logo.svg") no-repeat center; display: block; height: 200px;
   }
+ul.horizontal-list {
+    list-style-type: none;
+    
+  li {
+    float: left; font-family: fonts.$hiragino; font-size: 11px;
+  }
+  
+  li a {
+    color: white; 
+    text-decoration: none;
+  }
+}
+.content-wrapper {
+  min-height: 500px;
+  padding: 0 utils.get-vw(160px);
+}

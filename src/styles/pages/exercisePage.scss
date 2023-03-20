@@ -1,0 +1,48 @@
+@use "../variables/text" as fonts;
+@use "../variables/colors" as colors;
+@use "../utils" as utils;
+
+.list-element--exercise {
+    background-color: #FFCC21; position: relative; padding: 24px !important; flex-basis: utils.get-vw(288px) !important ;flex-direction: row; flex-wrap: wrap;
+    justify-content: center; z-index: 0;
+    img {opacity: 1; z-index: 1; position: absolute; }
+    .image-title {position: absolute; top: 100px; text-align: center; width: 100%; font-family: fonts.$inter-Regular; font-weight: 400; font-size: 25px;
+    color: colors.$primary-300; z-index: 3;} 
+    button {position: relative; display: inline-flex;  bottom: 120px; font-family: fonts.$hiragino; font-size: 14px; color: colors.$light; 
+        background-color: colors.$primary-400; padding: 0 20px; border: 0; outline: 0; z-index: 3;
+    }
+    .image-cover {width: 240px; height: 240px; background-color: black;  opacity: 0.4; z-index: 2;}
+    &+.list-element--exercise {margin-left: utils.get-vw(48px);}
+}
+#exercisePage .list-record { margin-top: 56px;}
+
+.graph-area, .exercise-area {
+    padding: 16px 20px; margin-top: 56px;
+    .area-title {text-align: left; color: colors.$light; font-family: fonts.$inter-Regular; font-weight: 400; 
+        &--date {font-size: 22px !important; position: relative; bottom: 8px; }
+        span {font-size: 15px; display: inline-block; width: 80px; line-height: 20px;}
+    }
+}
+.graph-area {
+    .body-record-config-area {
+        justify-content: left; height: 24px; margin-top: 10px;
+        button { float: left; width: 56px; height: 24px; border-radius: 15px; border: 0; outline: 0; background-color: colors.$light; color: colors.$primary-300;
+            font-family: fonts.$hiragino; font-size: 15px; color: colors.$primary-300;
+            &.selected {background-color: colors.$primary-300; color: colors.$light;}
+            &+button {margin-left: 16px;}
+        }
+    }
+}
+.exercise-area { 
+    .list-record {height: 300px; overflow: auto; margin: 0 !important;}
+    .list-element {border-bottom: 1px solid colors.$gray-400; flex-basis: utils.get-vw(400px); display: flex;
+        +.list-element { margin-left: 40px;}
+    }
+    .exercise-data { display: flex; flex-wrap: wrap;
+        .first-row {display: block; width: 100%;}
+        .dot {font-size: 6px; line-height: 20px; position: relative; bottom: 3px;}
+        .exercise-name {float: left; }
+        .exercise-time {justify-content: flex-end; display: inline; float: right;}
+    }
+    .exercise-calories {flex: 0 0 100%; display: flex;}
+}

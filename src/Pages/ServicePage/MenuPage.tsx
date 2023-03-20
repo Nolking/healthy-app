@@ -1,10 +1,10 @@
 import React from "react";
-
+import PageWrap from "../../Components/Layout/PageWrap";
 const MenuPage = function() {
     return (
-        <div>
+         <PageWrap>
             MenuPage
-        </div>
+         </PageWrap>
     )
 }
 

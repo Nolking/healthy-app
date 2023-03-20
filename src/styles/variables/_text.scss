@@ -6,21 +6,26 @@ $Noto-Medium: NotoSansJP-Medium;
 $Noto-Regular: NotoSansJP-Regular;
 $Noto-Thin: NotoSansJP-Thin;
 $Inter: Inter;
+$Inter-Black: Inter-Black;
+$Inter-Bold: Inter-Bold;
+$inter-Regular: Inter-Regular;
 
 @font-face {
     font-family: $hiragino;
     src: url("../fonts/Hiragino_Kaku_Gothic_Pro_W3.otf");
 }
+.hiragino {font-family: $hiragino;}
 
 @font-face {
     font-family: $Noto-Black;
     src: url("../fonts/NotoSansJP-Black.otf");
 }
-
+.noto-black {font-family: $Noto-Black}
 @font-face {
     font-family: $Noto-Bold;
     src: url("../fonts/NotoSansJP-Bold.otf");
 }
+.noto-bold {font-family: $Noto-Bold;}
 
 @font-face {
     font-family: $Noto-Light;
@@ -35,6 +40,7 @@ $Inter: Inter;
     font-family: $Noto-Regular;
     src: url("../fonts/NotoSansJP-Regular.otf");
 }
+.noto-reg {font-family: $Noto-Regular;}
 
 @font-face {
     font-family: $Noto-Thin;
@@ -44,3 +50,20 @@ $Inter: Inter;
     font-family: $Inter;
     src: url("../fonts/Inter-VariableFont_slnt_wght.ttf");
 }
+
+@font-face {
+    font-family: $Inter-Black;
+    src: url("../fonts/Inter-Black.ttf");
+}
+.inter-black {font-family: $Inter-Black;}
+
+@font-face {
+    font-family: $Inter-Bold;
+    src: url("../fonts/Inter-Bold.ttf");
+}
+.inter-bold {font-family: $Inter-Bold;}
+@font-face {
+    font-family: $inter-Regular;
+    src: url("../fonts/Inter-Regular.ttf");
+}
+.inter-regular {font-family: $inter-Regular;}

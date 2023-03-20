@@ -1,0 +1,9 @@
+@use "../variables/colors" as colors;
+@use "../utils" as utils;
+@use "../variables/text" as fonts;
+
+.app-footer { height: 115px; width: utils.get-vw(1280px); background-color: colors.$dark-500; padding-left: utils.get-vw(160px); padding-top: 56px;
+    li {margin-right: 45px; color: colors.$light; font-family: fonts.$hiragino;}
+}
+
+  

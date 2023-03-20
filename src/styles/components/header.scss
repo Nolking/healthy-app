@@ -1,0 +1,29 @@
+@use "../variables/colors" as colors;
+@use "../utils" as utils;
+@use "../variables/text" as fonts;
+
+ul {
+    list-style-type: none;
+  }
+  
+  li {
+  }
+  
+  li a {
+    color: white; 
+    text-decoration: none;
+  }
+.menu-item { float: right; margin-top: 8px; padding-right: utils.get-vw(30px); height: 48px; padding-top: 7px;}
+.menu-logo {display: inline-block; width: 32px; height: 32px; min-height: 32px; min-width: 32px; 
+    &:hover {cursor: pointer;}
+}
+.menu-item span {padding-left: 8px; line-height: 32px; float: right; font-family: fonts.$hiragino; padding-right: utils.get-vw(20px)}
+.icon-memo {background: url("../../../public/images/icon_memo.svg") no-repeat center;}
+.icon-challenge {background: url("../../../public/images/icon_challenge.svg") no-repeat center;}
+.icon-info {background: url("../../../public/images/icon_info.svg") no-repeat center; position: relative;}
+.info-count {background: url("../../../public/images/info_count.svg") no-repeat center; position: absolute; top: -3px; right: -5px; width: 16px; height: 16px;}
+.icon-menu {background: url("../../../public/images/icon_menu.svg") no-repeat center; margin-right: utils.get-vw(160px)}
+
+
+.page-header {height: 64px; background-color: colors.$dark-500; width: utils.get-vw(1280px) }
+.app-logo {float: left;margin-left: utils.get-vw(160px); width: utils.get-vw(144px); height: 64px; min-width: 144px; background: url("../../../public/images/App_Logo.svg") no-repeat center;}
