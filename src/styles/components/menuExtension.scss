@@ -5,10 +5,11 @@
     height: 100vh;
     width: 100%;
     background-color: rgba(0,0,0,0.5);
-    z-index: 0;
-    opacity: 0;
+    z-index: 10;
+    opacity: 1;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
+    &:hover {cursor: default;}
 }
 .menu-extension {width: 280px; z-index: 100; position: fixed; top: 98px; right: 0px;
     .icon-close {display: inline-block; background: url("../../../public/images/icon_close.svg") no-repeat center; 

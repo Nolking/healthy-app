@@ -43,6 +43,7 @@ const ExcercisePage = function({recordsPerPage} : Props) {
                 </div>
                 <div className="bg-dark-500 exercise-area">
                     <div className="area-title"><span >MY EXERCISE</span><span className="area-title--date"> 2021.05.21</span></div>
+                    {exerciseData.length > 0 &&
                     <PhotoRecordList cols={2}>
                         {exerciseData.map(data => (<div className="list-element exercise-data">
                             <div className="first-row">
@@ -53,10 +54,11 @@ const ExcercisePage = function({recordsPerPage} : Props) {
                             <div className="exercise-calories inter-regular color-prim-300">{data.calories}</div>
                         </div>))}
                     </PhotoRecordList>
+                    }
                 </div>
                 <div className="bg-light diary-area">
                     <div className="area-title">MY DIARY</div>
-                    <PhotoRecordList cols={4}>
+                    {diaryLogs.length > 0 && <PhotoRecordList cols={4}>
                         {diaryLogs.slice(0, visibleRecords).map(data => (<div className="list-element diary-data">
                             <div className="list-element-content">
                                 <div className="flex-break inter-regular color-dark-600">{data.logTime.split(' ')[0]}</div>
@@ -65,7 +67,8 @@ const ExcercisePage = function({recordsPerPage} : Props) {
                                 <span className="diary-content flex-break hiragino color-dark-500">{data.logContent}</span>
                             </div>
                         </div>))}    
-                    </PhotoRecordList>
+                    </PhotoRecordList>} 
+                    {diaryLogs.length ===0 && <div>No records</div>}
                 {visibleRecords < diaryLogs.length && (<button className="list-show-more-button hiragino gradient-bg clickable" onClick={handleClickShowMore}>記録をもっと見る</button>)}
 
                 </div>     

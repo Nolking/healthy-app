@@ -1,4 +1,9 @@
-const dietData = 
+interface DietData {
+    imageSrc : string,
+    date: string,
+    recordType: string
+}
+const dietData : DietData[] = 
     [
         {"imageSrc": '/images/diet01.jpg', "date": "05.21", "recordType": "Morning"},
         {"imageSrc": "/images/diet02.jpg", "date": "05.21", "recordType": "Morning"},
@@ -81,7 +86,13 @@ const dietData =
           ctx.restore();
         }
       };
-const exerciseData = [
+
+interface ExerciseData {
+    name: string,
+    time: string, 
+    calories: string
+}
+const exerciseData : ExerciseData[] = [
     {name: "家事全般（立位・軽い)", time: "10 min", calories: "26kcal"},
     {name: "家事全般（立位・軽い)", time: "10 min", calories: "26kcal"},
     {name: "家事全般（立位・軽い)", time: "10 min", calories: "26kcal"},
@@ -124,7 +135,11 @@ const exerciseData = [
    
     
 ];
-const diaryLogs = [
+interface DiaryLog {
+    logTime: string,
+    logContent: string,
+} 
+const diaryLogs : DiaryLog[] = [
     {logTime: "2021.05.21 23:25", logContent: "私の日記の記録が一部表示されます。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…"},
     {logTime: "2021.05.21 23:25", logContent: "私の日記の記録が一部表示されます。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…"},
     {logTime: "2021.05.21 23:25", logContent: "私の日記の記録が一部表示されます。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…"},
@@ -170,8 +185,14 @@ const recommendedData = [
     {title: "RECOMMENDED BEAUTY", name: "美容"},
     {title: "RECOMMENDED HEALTHY", name: "美容"}
 ]
-const columnData = 
-    [
+interface ColumnData {
+    imageSrc: string,
+    date: string, 
+    time: string, 
+    content: string,
+    hashtag: string,
+}
+const columnData : ColumnData[] = [
         {"imageSrc": '/images/column01.jpg', "date": "2021.05.21", "time": "23:25", "content": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…", "hashtag":"#魚料理  #和食  #DHA"},
         {"imageSrc": '/images/column02.jpg', "date": "2021.05.21", "time": "23:25", "content": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…", "hashtag":"#魚料理  #和食  #DHA"},
         {"imageSrc": '/images/column03.jpg', "date": "2021.05.21", "time": "23:25", "content": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…", "hashtag":"#魚料理  #和食  #DHA"},

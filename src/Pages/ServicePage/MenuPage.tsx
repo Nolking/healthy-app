@@ -25,6 +25,7 @@ const MenuPage = function({recordsPerPage} : Props) {
                         </div>
                     </div>))}
                 </PhotoRecordList>
+                {columnData.length > 0 &&
                 <PhotoRecordList cols={4} className="activity-area">
                     {columnData.slice(0, visibleRecords).map((record) => (
                         <div className="list-element">
@@ -41,6 +42,7 @@ const MenuPage = function({recordsPerPage} : Props) {
                     ))
                     }
                 </PhotoRecordList>
+                }
                 {visibleRecords < columnData.length && (<button className="list-show-more-button hiragino gradient-bg clickable" onClick={handleClickShowMore}>記録をもっと見る</button>)}
 
             </div>

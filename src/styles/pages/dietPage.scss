@@ -14,9 +14,10 @@
 }
 .meal-list {
     .list-element--details {position: absolute; left: 0px; bottom: 0; }
-    .list-element {padding: 0px !important; margin-left: 8px; max-width: calc(25% - 8px);
+    .list-element {padding: 10px 0 0 0 !important; margin-left: 8px; max-width: calc(25% - 8px);
         &:nth-child(4n+1) {margin-left: 0;}
     }
+    img {width: 100% !important; height: 100% !important;}
 
 }
 .diet-main-graph {

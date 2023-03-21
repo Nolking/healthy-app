@@ -12,7 +12,9 @@
 
     .record-image {width: 234px; height: 234px;}
     .list-element {position: relative; padding: 8px 4px 0 4px;}
-    .list-element--details { text-align: left; font-size: 15px; width: 130px; padding: 8px 0px 8px 4px; background-color: colors.$primary-300; color: colors.$light}
+    .list-element--details { text-align: left; font-size: 15px; width: 130px; padding: 8px 0px 8px 4px; 
+        height: utils.get-vw(32px); line-height: utils.get-vw(22px);
+        background-color: colors.$primary-300; color: colors.$light}
 }
 .record-filter-area { padding: 25px 30px; 
     display: inline-block;

@@ -106,20 +106,22 @@ const DietPage = ({recordsPerPage} : Props) => {
                         <div className="hex-icon icon-cup"></div><div  className="hex-icon-text">Snack</div>
                     </li>
                 </ul>
-                <PhotoRecordList cols={4} className="meal-list">
-                    {dietData.slice(0, visibleRecords).map((record) => (
-                        <div className="list-element">
-                        <PhotoRecord
-                            imgH={234}
-                            imgW={234}
-                            imageSrc={record.imageSrc} 
-                            date={record.date} 
-                            recordType={record.recordType}>
-                        </PhotoRecord>
-                        </div>
-                    ))
-                    }
-                </PhotoRecordList>
+                {dietData.length > 0 && 
+                    <PhotoRecordList cols={4} className="meal-list">
+                        {dietData.slice(0, visibleRecords).map((record) => (
+                            <div className="list-element">
+                            <PhotoRecord
+                                imgH={234}
+                                imgW={234}
+                                imageSrc={record.imageSrc} 
+                                date={record.date} 
+                                recordType={record.recordType}>
+                            </PhotoRecord>
+                            </div>
+                        ))
+                        }
+                    </PhotoRecordList>
+                }
                 {visibleRecords < dietData.length && (<button className="list-show-more-button hiragino gradient-bg clickable" onClick={handleClickShowMore}>記録をもっと見る</button>)}
             </div>
         </PageWrap>
