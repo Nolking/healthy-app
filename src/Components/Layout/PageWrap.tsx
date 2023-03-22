@@ -6,8 +6,10 @@ type Props = {
 }
 
 const PageWrap = ({ children} : Props) => {
+    
     return (
         <React.Fragment>
+          
             <Header></Header>
                 <div className="page-wrap">
                     {children}
